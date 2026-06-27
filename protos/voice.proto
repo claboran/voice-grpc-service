@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package voice;
+
+// The VoiceService acts as a remote control for the Jetson's physical speaker.
+service VoiceService {
+  // Triggers local playback on the Jetson hardware
+  rpc SpeakLocally (SpeechRequest) returns (SpeechStatus);
+}
+
+message SpeechRequest {
+  string text = 1;
+}
+
+message SpeechStatus {
+  bool success = 1;
+  string message = 2;
+}
