@@ -56,6 +56,8 @@ pip install torch torchvision torchaudio onnxruntime-gpu \
 pip install grpcio grpcio-tools piper-tts
 ```
 
+See `requirements.txt` for the exact pinned versions of all installed packages.
+
 ### 3. Resolve the missing NVPL link
 
 JetPack 7 replaced standard OpenBLAS with NVIDIA Performance Libraries (NVPL). The PyTorch wheel expects these at the OS level but they are not installed by default:
